@@ -7,6 +7,10 @@ RUN a2enmod rewrite
 RUN apt-get update && apt-get install -y \
     unzip
 
+# Install mysqli
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-enable mysqli
+
 # Copy Joomla zip file from local system
 COPY Joomla_3.7.4-Stable-Full_Package.zip /var/www/html/joomla.zip
 
