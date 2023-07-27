@@ -67,7 +67,6 @@ class JConfig {
     public \$asset_id = '1';
     public \$debug = '0';
     public \$debug_lang = '0';
-    public \$display_offline_message = '1';
     public \$offset_user = 'UTC';
     public \$mediaversion = 'd8d8d2526f31b880fe627d2d15a814de';
     public \$cache_platformprefix = '0';
