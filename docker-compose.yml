@@ -9,7 +9,6 @@ services:
       - ${IP}:${PORT}:80 # change ip if required
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
-      - ./joomla_data:/var/www/html
     environment:
       JOOMLA_DB_HOST: db
       JOOMLA_DB_USER: root
