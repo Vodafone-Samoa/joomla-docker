@@ -13,7 +13,7 @@ services:
       JOOMLA_DB_HOST: db
       JOOMLA_DB_USER: root
       JOOMLA_DB_PASSWORD: "${DB_ROOT_PASSWORD}"
-      JOOMLA_DB_NAME: "{DB_NAME}"
+      JOOMLA_DB_NAME: "${DB_NAME}"
     depends_on:
       - db
 
