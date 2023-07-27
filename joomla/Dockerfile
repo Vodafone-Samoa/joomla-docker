@@ -1,7 +1,12 @@
-FROM php:7.1-apache
+FROM php:7.4-apache
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
+
+# Install curl and unzip
+RUN apt-get update && apt-get install -y \
+    curl \
+    unzip
 
 # Download specified version of Joomla
 RUN curl -o joomla.zip -SL https://downloads.joomla.org/cms/joomla3/3-7-4/Joomla_3-7-4-Stable-Full_Package.zip \
@@ -11,3 +16,4 @@ RUN curl -o joomla.zip -SL https://downloads.joomla.org/cms/joomla3/3-7-4/Joomla
 
 # Copy configuration file
 COPY configuration.php /var/www/html/
+
