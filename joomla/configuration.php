@@ -11,11 +11,18 @@ class JConfig {
 	public $access = '1';
 
 	public $dbtype = 'mysqli';
-	public $host = getenv('JOOMLA_DB_HOST');
-	public $user = getenv('JOOMLA_DB_USER');
-	public $password = getenv('JOOMLA_DB_PASSWORD');
-	public $db = getenv('JOOMLA_DB_NAME');
-	public $dbprefix = 'jos_';
+  public $host;
+  public $user;
+  public $password;
+  public $db;
+  public $dbprefix = 'jos_';
+
+  public function __construct() {
+      $this->host = getenv('JOOMLA_DB_HOST');
+      $this->user = getenv('JOOMLA_DB_USER');
+      $this->password = getenv('JOOMLA_DB_PASSWORD');
+      $this->db = getenv('JOOMLA_DB_NAME');
+  }
 
 	public $live_site = '';
 	public $secret = 'secret'; // Change this to your own secret string
