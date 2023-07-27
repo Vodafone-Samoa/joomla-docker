@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Starting startup.sh script..."
+
 # Generate configuration.php
 cat << EOF > /var/www/html/configuration.php
 <?php
