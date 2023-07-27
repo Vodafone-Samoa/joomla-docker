@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     unzip
 
 # Download specified version of Joomla
-RUN curl -o joomla.zip -SL https://downloads.joomla.org/cms/joomla3/3-7-4/Joomla_3-7-4-Stable-Full_Package.zip \
+RUN curl -L -o joomla.zip https://downloads.joomla.org/cms/joomla3/3-7-4/Joomla_3-7.4-Stable-Full_Package.zip?format=zip \
  && unzip joomla.zip -d /var/www/html/ \
  && chown -R www-data:www-data /var/www/html \
  && rm joomla.zip
