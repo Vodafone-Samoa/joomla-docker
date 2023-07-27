@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y \
     unzip
 
 # Copy Joomla zip file from local system
-COPY Joomla_3-7-4-Stable-Full_Package.zip /var/www/html/joomla.zip
+COPY Joomla_3-7-4-Stable-Full_Package/ /var/www/html/
 
 # Unzip Joomla
-RUN unzip /var/www/html/joomla.zip -d /var/www/html/ \
+RUN unzip -v /var/www/html/joomla.zip -d /var/www/html/
  && chown -R www-data:www-data /var/www/html \
  && rm /var/www/html/joomla.zip
 
